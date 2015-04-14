@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <link type="text/css" rel="stylesheet" href="http://mbostock.github.io/d3/talk/20111018/style.css"/>
+  <script type="text/javascript" src="http://mbostock.github.io/d3/talk/20111018/d3/d3.js"></script>
+  <script type="text/javascript" src="http://mbostock.github.io/d3/talk/20111018/d3/d3.layout.js"></script>
+  <style type="text/css">
+  
+  .chart {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  }
+  
+  text {
+  font-size: 11px;
+  }
+  
+  rect {
+  fill: none;
+  }
+  
+  </style>
+  </head>
+  <body>
+  <div id="body">
+  <div id="footer">
+        d3.layout.treemap
+        <div class="hint">click or option-click to descend or ascend</div>
+        <div><select>
+          <option value="size">Size</option>
+          <option value="count">Count</option>
+        </select></div>
+      </div>
+    </div>
+  
+	 <script type="application/json" id="data">{"name":"FEAS","children":[{"name":"CO","children":[{"name":"APSC-1-CO-1","children":[{"name":"TBD","size":12}]},{"name":"APSC-1-CO-2","children":[{"name":"Summarizes and paraphrases written work accurately.","size":12}]},{"name":"APSC-1-CO-3","children":[{"name":"Effectively communicates technical information following a prescribed format and using standard grammar and mechanics.","size":12}]},{"name":"APSC-1-CO-4","children":[{"name":"Delivers clear and organized formal presentation following established guidelines.","size":12}]},{"name":"APSC-1-CO-5","children":[{"name":"TBD","size":12}]},{"name":"APSC-1-CO-6","children":[{"name":"Constructs\u00a0effective figures, tables, and drawings employing standard conventions to compliment text.","size":12}]}]},{"name":"DE","children":[{"name":"APSC-1-DE-1","children":[{"name":"Follows a general design process to design system, component, or process to solve open-ended complex problem.","size":9}]},{"name":"APSC-1-DE-2","children":[{"name":"Accurately defines a problem, including constraints, goals, questions, stakeholders, and client needs.","size":9}]},{"name":"APSC-1-DE-3","children":[{"name":"TBD","size":9}]},{"name":"APSC-1-DE-4","children":[{"name":"Produces a variety of potential design solutions suited to meet functional specifications based on stakeholder needs.","size":9}]},{"name":"APSC-1-DE-5","children":[{"name":"Performs systematic evaluations of the degree to which several design concept options meet project criteria.","size":9}]},{"name":"APSC-1-DE-6","children":[{"name":"Compares the design solution against the problem objective.","size":9}]}]},{"name":"EC","children":[{"name":"APSC-1-EC-1","children":[{"name":"Plans and efficiently manages time and money.","size":5}]},{"name":"APSC-1-EC-2","children":[{"name":"Establishes appropriate project scope, after consultation with client, based on available resources.","size":5}]},{"name":"APSC-1-EC-3","children":[{"name":"Plan project with clear milestones and delegation.","size":5}]},{"name":"APSC-1-EC-4","children":[{"name":"Describes economic feasibility of project using time value of money and defensible financial costs and returns","size":5}]},{"name":"APSC-1-EC-5","children":[{"name":"TBD","size":5}]}]},{"name":"EE","children":[{"name":"APSC-1-EE-1","children":[{"name":"Demonstrates behaviour congruent with academic integrity expectations of university and faculty.","size":2}]},{"name":"APSC-1-EE-2","children":[{"name":"Recognizes and resolves ethical dilemmas based on ethical principles and relevant code of ethics (focus on bribery and broad equity).","size":2}]},{"name":"APSC-1-EE-3","children":[{"name":"Describes ethical issues and impact on stakeholders (individual, the employer, public, minority groups including aboriginal groups, etc.).","size":2}]},{"name":"APSC-1-EE-4","children":[{"name":"Describes consequences of deviating from professional codes of conduct and university code of conduct.","size":2}]}]},{"name":"ET","children":[{"name":"APSC-1-ET-1","children":[{"name":"Selects appropriate measurement devices or techniques to accomplish a task.","size":3}]},{"name":"APSC-1-ET-2","children":[{"name":"Follows protocols when using techniques, skills and tools.","size":3}]},{"name":"APSC-1-ET-3","children":[{"name":"Demonstrates correct use of testing apparatus, databases and models.","size":3}]},{"name":"APSC-1-ET-4","children":[{"name":"TBD","size":3}]}]},{"name":"IM","children":[{"name":"APSC-1-IM-1","children":[{"name":"Describes relationship between human activity and earth systems. (APSC151)","size":4}]},{"name":"APSC-1-IM-2","children":[{"name":"Describes management techniques for sustainable development. (APSC151)","size":4}]},{"name":"APSC-1-IM-3","children":[{"name":"Devises solutions for engineering problems that incorporate technical, social, environmental, and legal factors.","size":4}]}]},{"name":"IN","children":[{"name":"APSC-1-IN-1","children":[{"name":"Constructs appropriate hypothesis and select experimental methods.","size":7}]},{"name":"APSC-1-IN-2","children":[{"name":"Use and document appropriate measurement techniques to collect data and information.","size":7}]},{"name":"APSC-1-IN-3","children":[{"name":"Apply problem solving approaches to troubleshoot issues.","size":7}]},{"name":"APSC-1-IN-4","children":[{"name":"Use appropriate tools to organize and analyze data and information.","size":7}]},{"name":"APSC-1-IN-5","children":[{"name":"Describe nature and possible causes of uncertainty in analysis, interpretation, and measurement.","size":7}]},{"name":"APSC-1-IN-6","children":[{"name":"Synthesizes information from experimentation, investigation, and literature to reach substantiated conculsions.","size":7}]},{"name":"APSC-1-IN-7","children":[{"name":"Describe and demonstrate safety protocol in laboratory environment.","size":7}]}]},{"name":"KB","children":[{"name":"APSC-1-KB-1","children":[{"name":"Constructs\u00a0mathematical descriptions or expressions to model a real-world problem.","size":6}]},{"name":"APSC-1-KB-2","children":[{"name":"Selects and describes appropriate tools to solve mathematical problems that arise from modeling a real-world problem.","size":6}]},{"name":"APSC-1-KB-3","children":[{"name":"Uses solution to mathematical problems to inform the real-world problem that gave rise to it.","size":6}]},{"name":"APSC-1-KB-4","children":[{"name":"Concept inventory scores (e.g. FCI, CCI) or scores on topics as indicator of conceptual understanding of basic science.","size":6}]}]},{"name":"LL","children":[{"name":"APSC-1-LL-1","children":[{"name":"Identifies the needed information resulting from an assigned project using a recommended structure.","size":5}]},{"name":"APSC-1-LL-2","children":[{"name":"Identifies appropriate information sources to meet the information need using a prescribed methodology from prescribed sources (e.g. Library Catalogue and a multidisciplinary database).","size":5}]},{"name":"APSC-1-LL-3","children":[{"name":"Evaluates information using simple prescribed criteria such as authority, currency, and objectivity.","size":5}]},{"name":"APSC-1-LL-4","children":[{"name":"Organises and manages information using a simple prescribed structure and format.","size":5}]},{"name":"APSC-1-LL-5","children":[{"name":"TBD","size":5}]},{"name":"APSC-1-LL-6","children":[{"name":"Reviews, reflects on and makes improvements on individual learning performance.","size":5}]},{"name":"APSC-1-LL-7","children":[{"name":"Awareness of different learning approaches.","size":5}]}]},{"name":"PA","children":[{"name":"APSC-1-PA-1","children":[{"name":"Identifies known and unknown information, uncertainties, and biases when presented a complex ill-structured problem.","size":12}]},{"name":"APSC-1-PA-2","children":[{"name":"Constructs\u00a0process for solving problem including justified approximations and assumptions.","size":12}]},{"name":"APSC-1-PA-3","children":[{"name":"Applies critical and creative thinking principles to solve contextualized problems.","size":12}]},{"name":"APSC-1-PA-4","children":[{"name":"Creates and applies appropriate quantitative model and analysis to solve problems.","size":12}]},{"name":"APSC-1-PA-5","children":[{"name":"Applies numerical modeling tool to\u00a0construct model used for solving complex problems.","size":12}]},{"name":"APSC-1-PA-6","children":[{"name":"Identifies key questions to be asked in resolving a problem.","size":12}]},{"name":"APSC-1-PA-7","children":[{"name":"Evaluates validity of results and model for error, uncertainty.","size":12}]},{"name":"APSC-1-PA-8","children":[{"name":"Draws conclusions supported by evidence, with explicit reference to context in which they are true.","size":12}]}]},{"name":"PR","children":[{"name":"APSC-1-PR-1","children":[{"name":"Describes role of protection of the public and public interest in decision making.","size":2}]},{"name":"APSC-1-PR-2","children":[{"name":"Demonstrates punctuality, responsibility and appropriate communication etiquette.","size":2}]},{"name":"APSC-1-PR-3","children":[{"name":"Applies professional codes of ethics and engineering standards to engineering problems.","size":2}]},{"name":"APSC-1-PR-4","children":[{"name":"TBD","size":2}]}]},{"name":"TW","children":[{"name":"APSC-1-TW-1","children":[{"name":"Describes own temperament and analyzes impact of own temperament on group work.","size":5}]},{"name":"APSC-1-TW-2","children":[{"name":"Applies principles of conflict management to resolve team issues.","size":5}]},{"name":"APSC-1-TW-3","children":[{"name":"Exercises initiative and participates equitably, including participating actively in meetings.","size":5}]},{"name":"APSC-1-TW-4","children":[{"name":"TBD","size":5}]},{"name":"APSC-1-TW-5","children":[{"name":"Establishes team contract around behaviour, expectations, and timelines.","size":5}]}]}]}  </script> 
+	
+	
+  
+  
+  <script type="text/javascript">
+  
+  var data = document.getElementById('data').innerHTML;
+  data = JSON.parse(data);
+  
+  var w = 1280 - 80,
+  h = 800 - 180,
+  x = d3.scale.linear().range([0, w]),
+  y = d3.scale.linear().range([0, h]),
+  color = d3.scale.category20c(),
+  root,
+  node;
+  
+  var treemap = d3.layout.treemap()
+  .round(false)
+  .size([w, h])
+  .sticky(true)
+  .value(function(d) { return d.size; });
+  
+  var svg = d3.select("#body").append("div")
+  .attr("class", "chart")
+  .style("width", w + "px")
+  .style("height", h + "px")
+  .append("svg:svg")
+  .attr("width", w)
+  .attr("height", h)
+  .append("svg:g")
+  .attr("transform", "translate(.5,.5)");
+  
+  
+  node = root = data;
+  
+  var nodes = treemap.nodes(root)
+  .filter(function(d) { return !d.children; });
+  
+  var cell = svg.selectAll("g")
+  .data(nodes)
+  .enter().append("svg:g")
+  .attr("class", "cell")
+  .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+  .on("click", function(d) { return zoom(node == d.parent ? root : d.parent); });
+  
+  cell.append("svg:rect")
+  .attr("width", function(d) { return d.dx - 1; })
+  .attr("height", function(d) { return d.dy - 1; })
+  .style("fill", function(d) { return color(d.parent.name); });
+  
+  cell.append("svg:text")
+  .attr("x", function(d) { return d.dx / 2; })
+  .attr("y", function(d) { return d.dy / 2; })
+  .attr("dy", ".35em")
+  .attr("text-anchor", "middle")
+  .text(function(d) { return d.name; })
+  .style("opacity", function(d) { d.w = this.getComputedTextLength(); return d.dx > d.w ? 1 : 0; });
+  
+  d3.select(window).on("click", function() { zoom(root); });
+  
+  d3.select("select").on("change", function() {
+  treemap.value(this.value == "size" ? size : count).nodes(root);
+  zoom(node);
+});
+  
+  
+  function size(d) {
+  return d.size;
+  }
+  
+  function count(d) {
+  return 1;
+  }
+  
+  function zoom(d) {
+  var kx = w / d.dx, ky = h / d.dy;
+  x.domain([d.x, d.x + d.dx]);
+  y.domain([d.y, d.y + d.dy]);
+  
+  var t = svg.selectAll("g.cell").transition()
+      .duration(d3.event.altKey ? 7500 : 750)
+      .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
+
+  t.select("rect")
+      .attr("width", function(d) { return kx * d.dx - 1; })
+      .attr("height", function(d) { return ky * d.dy - 1; })
+
+  t.select("text")
+      .attr("x", function(d) { return kx * d.dx / 2; })
+      .attr("y", function(d) { return ky * d.dy / 2; })
+      .style("opacity", function(d) { return kx * d.dx > d.w ? 1 : 0; });
+
+  node = d;
+  d3.event.stopPropagation();
+}
+
+    </script>
+  </body>
+</html>
