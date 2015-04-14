@@ -85,9 +85,9 @@ or with a finer grain, by attribute and indicator:
 
 ![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/curriculum_treemap.png)
 
-or a utilize d3js (Data Driven Documents JavaScript Library) to produce [dendrogram visualization][dendro] of the outcomes structure from the basemap
+or produce a [collapsible dendrogram visualization][dendro] of the outcomes structure from the basemap
 
-[dendro]: https://raw.githubusercontent.com/jkaupp/curricualized/master/web/dendro.html)
+[dendro]: http://bl.ocks.org/jkaupp/c793358e6c07e3205d5f
 
 
 
