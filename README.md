@@ -91,7 +91,7 @@ or with a finer grain, by attribute and indicator:
 
 or produce a [collapsible dendrogram visualization][dendro] of the outcomes structure from the basemap
 
-[dendro]: http://bl.ocks.org/jkaupp/c793358e6c07e3205d5f
+[dendro]: http://bl.ocks.org/jkaupp/87595e890778e8d14343
 
 
 # What does it get used for?
