@@ -79,7 +79,7 @@ Once you arrange your mapping information into a Base Map and Encoding Matrix, y
 
 For example, a treemap visualization of the curriculum:
 
-![](./image/Curriculum Treemap.pdf)
+![](http://raw.githubusercontent.com/jkaupp/curricualized/master/image/Curriculum Treemap.pdf)
 
 or a [dendrogram visualization][dendro] of the outcomes structure from the basemap:
 
