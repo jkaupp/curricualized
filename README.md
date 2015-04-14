@@ -77,11 +77,16 @@ Once you arrange your mapping information into a Base Map and Encoding Matrix, y
 1. temporal data
 2. tree data
 
-For example, a treemap visualization of the curriculum:
+For example, a treemap visualization of the curriculum by attribute:
 
-![](http://raw.githubusercontent.com/jkaupp/curricualized/master/image/Curriculum Treemap.pdf)
+![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/curriculum_ga_treemap.png)
 
-or a [dendrogram visualization][dendro] of the outcomes structure from the basemap:
+or with a finer grain, by attribute and indicator:
+
+![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/curriculum_treemap.png)
+
+or a [dendrogram visualization][dendro] of the outcomes structure from the basemap
+
 
 [dendro]: http://raw.githubusercontent.com/jkaupp/curricualized/master/web/Dendro.html)
 
