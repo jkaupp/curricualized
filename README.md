@@ -88,7 +88,7 @@ or with a finer grain, by attribute and indicator:
 or a [dendrogram visualization][dendro] of the outcomes structure from the basemap
 
 
-[dendro]: http://raw.githubusercontent.com/jkaupp/curricualized/master/web/Dendro.html)
+[dendro]: http://raw.githubusercontent.com/jkaupp/curricualized/master/web/dendro.html)
 
 
 
