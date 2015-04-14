@@ -1,5 +1,8 @@
-# Visualized Curriuclum
-## *an alternate approach to traditional mapping*
+# curricualized: _visualizing curriculum mapping_
+---
+
+_This approach is best suited for those programs and people that are familiar with curriculum mapping, and have undertaken or completed the mapping process at least once._
+
 ---
 
 Often curriculum mapping is done as a one-off, 'fire-and-forget' method at the start of a cylical/program/curriculum review. This is despite the fact, that once most  program undertake curriculum mapping, they tend to learn a great deal about the how their programs are structure, how they are taught, how they are assessed and how the students develop the intended outcomes.
@@ -14,7 +17,7 @@ A more pressing issue is what one actually gets out of a curriculum map, or _wha
 
 I believe that it is the combination of incorrect granularity of mapping and and the lack of meaningful visualization options that is the key obstacle impeding meaningful and continuous curriculum mapping.
 
-		*This approach is best suited for those programs and people that are familiar with curriculum mapping, and have undertaken or completed the mapping process at least once.* 
+
 
 ---
 
