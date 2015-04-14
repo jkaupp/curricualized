@@ -47,23 +47,24 @@ These questions provide depth and 		insight but are targeted at the course-level
 
 By expanding the questions, and focusing them towards student activity, these questions can address elements of **What**, **How**, **When**, **Who** as well as potential areas of **Complexity**, **Scaffolding**, and **Expectations**. These are question such as:
 
-* What are your course learning outcomes?
-* Does your course specifically develop the CLO?
-* Which Program level learning outcomes (indicators/GA's) map to your CLOs
-* What are your assessments?
-* When do these occur?
-* Which CLOs map to which assessment?
-* What is the type of each assessment?
-* What is the complexity of the assessment?
-* What scaffolding is provided in the assessment?
-* How long between instruction and assessment of CLO?
-* Who assesses student work?
+* What are your course learning outcomes? (**What**)
+* Does your course specifically develop the CLO? (**How**)
+* Which Program level learning outcomes (indicators/GA's) map to your CLOs (**What**)
+* What are your assessments? (**How**)
+* When do these occur? (**When**)
+* Which CLOs map to which assessment? (**Where**)
+* What is the type of each assessment? (**What**)
+* What is the complexity of the assessment? (**Complexity**)
+* What scaffolding is provided in the assessment? (**Scaffolding**)
+* How long between instruction and assessment of CLO? (**How**)
+* Who assesses student work? (**Who**)
+* What are the expectations for achieving the outcome? (**Expectations**)
 	
 These questions can be delivered in a survey
 	
-|Course-level Outcome | Indicator   | Graduate Attribute | Assessment | Date of Instruction | Date of Assessment | Assessment Type | Assessed by | Complexity             | Scaffolding          |
-|:-------------------:|:-----------:|:------------------:|:----------:|:------------------: |:------------------:|:---------------:|:-----------:|:----------------------:|:---------------------|
-|   CLO1              | APSC-1-DE-2 |       DE           |    MEA 1   | 10/15/2015          |     10/31/2015     |       OEP       |     TA      | Open-ended, Ill defined| Restriction of scope | 
+|Course-level Outcome | Indicator   | Graduate Attribute | Assessment | Date of Instruction | Date of Assessment | Assessment Type | Assessed by | Complexity             | Scaffolding          | Expectations |
+|:-------------------:|:-----------:|:------------------:|:----------:|:------------------: |:------------------:|:---------------:|:-----------:|:----------------------:|:--------------------:|:------------:|
+|   CLO1              | APSC-1-DE-2 |       DE           |    MEA 1   | 10/15/2015          |     10/31/2015     |       OEP       |     TA      | Open-ended, Ill defined| Restriction of scope | Rubric lvl 3 |
 
 
 The next step is creating the two main elements of a curriculum map to be visualized
