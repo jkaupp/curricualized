@@ -94,7 +94,48 @@ or produce a [collapsible dendrogram visualization][dendro] of the outcomes stru
 [dendro]: http://bl.ocks.org/jkaupp/c793358e6c07e3205d5f
 
 
+# What does it get used for?
 
+The approach and it's visualizations aren't a stand-alone, or a replacement for the full collaborative currriuclum mapping process.  They are intended to be an improvement on traditional approaches, and provide support for the key stages of collaborative curriculum decision making as shown below:
+
+![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/curmapcircle.jpg)
+
+
+The foremost goal of this approach is to provide insight and inform collaborative curriculum discussions and seeks to do so by providing insight by providing visualizations to answer the guiding questions for curriculum mapping decisions[1]
+
+###Instructional & Assessment Methods
+
+1. What instructional/assessment strategies are we most/least using?
+2. Are the instructional and assessment methods used in the courses congruent with the discipline and our program’s/College’s/Institution’s mission/vision?
+3. Are the instructional and assessment methods used in the courses congruent with the discipline’s signature pedagogies?
+4. In terms of supporting student learning, how well are the instructional and assessment methods that we use actually working?  
+
+###Learning Outcomes
+
+1. What learning outcomes are we most/least emphasizing?
+2. Where are the strengths and gaps in the teaching and assessment of these learning outcomes?
+3. Do the instructional and assessment methods that we are using best align with the intended learning outcomes?
+4. Are these learning outcomes appropriate? Are there any omissions?  Is clarification warranted?
+
+###Workload and Progression
+
+1. How is student workload distributed across the semester?
+2. Have students/faculty expressed concern over workload at particular times of the semester? Is there opportunity to more evenly distribute the workload?
+3. How is student learning progressing for each of the learning outcomes?
+4. Are students provided adequately with an opportunity to progress towards their achievement of each learning outcome?
+
+###General
+
+1. What data presented most surprised you? Why?
+2. Where are our strengths?  What are we doing well?
+3. Do these results align or conflict with any other curriculum assessment results or past program reviews (e.g. student/faculty/employee feedback)? Why?  How so?  Where are there areas of congruency or divergence?
+4. What are the next steps we can take improve, align, and integrate our curriculum?
+
+---
+
+#References
+
+[1] 'Learning Outcomes Curriculum Mapping'. 2015. Web. 14 Apr. 2015. http://www.uoguelph.ca/vpacademic/avpa/outcomes/curriculummap.php
 
 
 
