@@ -37,27 +37,31 @@ This is my argument for conducting mapping at the finest level of granularity: _
 
 **If it ain't broke**: The collaborative mapping approach works, and should be followed.  However, the questions aksed in a typical mapping approach should be tailored to ask specific questions at the student-level grain.  The process usually begins by asking questions of your faculty, such as:
 
-	* What methods of instruction do you use in your course? (**What**)
-	* What methods of assessment are used in your course? (**How**)
-	* Which program-level learning outcomes are developed in your course? (**What**)
-	* What level of complexity/depth is expected for each of the learning outcomes? (**Level**)
-	* Please specify how each of the learning outcomes are taught and assessed in your course. (**How**)
+```
+* What methods of instruction do you use in your course? (**What**)
+* What methods of assessment are used in your course? (**How**)
+* Which program-level learning outcomes are developed in your course? (**What**)
+* What level of complexity/depth is expected for each of the learning outcomes? (**Level**)
+* Please specify how each of the learning outcomes are taught and assessed in your course. (**How**)
+```
 
 These questions provide depth and 		insight but are targeted at the course-level and only indirectly address _what the student does_. They also only infer **When**, by knowing that the course offering happens at a certain time.  Additionally, there is no information pertaining to **Who** assesses the students.  
 
 By expanding the questions, and focusing them towards student activity, these questions can address elements of **What**, **How**, **When**, **Who** as well as potential areas of **Complexity**, **Scaffolding**, and **Expectations**. These are question such as:
 
-	* What are your course learning outcomes?
-	* Does your course specifically develop the CLO?
-	* Which Program level learning outcomes (indicators/GA's) map to your CLOs
-	* What are your assessments?
-	* When do these occur?
-	* Which CLOs map to which assessment?
-	* What is the type of each assessment?
-	* What is the complexity of the assessment?
-	* What scaffolding is provided in the assessment?
-	* How long between instruction and assessment of CLO?
-	* Who assesses student work?
+```
+* What are your course learning outcomes?
+* Does your course specifically develop the CLO?
+* Which Program level learning outcomes (indicators/GA's) map to your CLOs
+* What are your assessments?
+* When do these occur?
+* Which CLOs map to which assessment?
+* What is the type of each assessment?
+* What is the complexity of the assessment?
+* What scaffolding is provided in the assessment?
+* How long between instruction and assessment of CLO?
+* Who assesses student work?
+```
 	
 These questions can be delivered in a survey
 	
