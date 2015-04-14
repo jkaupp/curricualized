@@ -75,7 +75,15 @@ The next step is creating the two main elements of a curriculum map to be visual
 Once you arrange your mapping information into a Base Map and Encoding Matrix, you have essentially created a hierarchical data structre that can be visualized using the many different types of data contained therein.  In the case of curriculum mapping, this data would be best represented as:
 
 1. temporal data
-2. tree data.
+2. tree data
+
+For example, a treemap visualization of the curriculum:
+
+![](./image/Curriculum Treemap.pdf)
+
+or a [dendrogram visualization][dendro] of the outcomes structure from the basemap:
+
+[dendro]: http://raw.githubusercontent.com/jkaupp/curricualized/master/web/Dendro.html)
 
 
 
