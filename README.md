@@ -1,18 +1,15 @@
 # curricualized: _visualizing curriculum mapping_
----
 
 >Curriculum Mapping: “representing spatially the different components of the curriculum so that the whole picture and the relationships and connections between the parts of the map are easily seen”.  Harden (2001)
-
----
 
 The above quote may be the underlying goal of curriculum mapping, but I think it got lost along the way.
 
 Often curriculum mapping is done as a one-off, 'fire-and-forget' method at the start of a cylical/program/curriculum review. This is despite the fact, that once most  program undertake curriculum mapping, they tend to learn a great deal about the how their programs are structure, how they are taught, how they are assessed and how the students develop the intended outcomes.
 
 This typically isn't due to mass apathy, laziness or a lack of time.  Once a curriculum map is developed, it can easily be modified to reflect changes. However, "easy" is relative to resolution/granularity
- 
+
    * Maps with a very big resolution can be modified easy, as they contain large grains of information *(courses,semesters, etc.)*
- 
+
    * Maps with a very small resolution are more difficult to modified, as they contain very fine grains of information *(assessments, weeks)*  
 
 A more pressing issue is what one actually gets out of a curriculum map, or _what it tells you_.  In most cases, the curriculum map is simply presented as a matrix, a table, or a gantt-style chart at best.  This view of the curriculum doesn't lend itself to be easily understood, and doesn't provide a great deal of meaning beyond those that created the map.
@@ -61,9 +58,9 @@ By expanding the questions, and focusing them towards student activity, these qu
 * How long between instruction and assessment of CLO? (**How**)
 * Who assesses student work? (**Who**)
 * What are the expectations for achieving the outcome? (**Expectations**)
-	
+
 These questions can be delivered in a survey
-	
+
 |Course-level Outcome | Indicator   | Graduate Attribute | Assessment | Date of Instruction | Date of Assessment | Assessment Type | Assessed by | Complexity             | Scaffolding          | Expectations |
 |:-------------------:|:-----------:|:------------------:|:----------:|:------------------: |:------------------:|:---------------:|:-----------:|:----------------------:|:--------------------:|:------------:|
 |   CLO1              | APSC-1-DE-2 |       DE           |    MEA 1   | 10/15/2015          |     10/31/2015     |       OEP       |     TA      | Open-ended, Ill defined| Restriction of scope | Rubric lvl 3 |
@@ -138,9 +135,3 @@ The foremost goal of this approach is to provide insight and inform collaborativ
 #References
 
 [1] 'Learning Outcomes Curriculum Mapping'. 2015. Web. 14 Apr. 2015. http://www.uoguelph.ca/vpacademic/avpa/outcomes/curriculummap.php
-
-
-
-
-
-
