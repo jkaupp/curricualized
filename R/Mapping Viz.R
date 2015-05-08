@@ -12,7 +12,7 @@ library(tidyr)
 
 setwd("~/ownCloud/Faculty Outcomes Work/Department Data/Faculty-wide/Maps")
 
-levels = c(0:6)
+levels = c(0:5)
 labels = c("T, A","T, U","U, A","T","U","A")
 test <- function(x) factor(x,levels=levels,labels=labels)
 
@@ -27,7 +27,8 @@ m.data <- melt(data,c("Program", "GA","Indicator", "Description"),c(5:17))
 names(m.data) %<>%
   tolower()
 
-tree.map <- m.data %>% 
+# Changed to course view.
+tree.map <- m.data[m.data$variable=="APSC.101",] %>% 
   group_by(program,ga,indicator,description) %>% 
   summarize(n.assessed=sum(value))
 
@@ -53,7 +54,7 @@ treemap(tree.map,
         index = c("ga","indicator"),
         vSize = "ga.assessed",
         vColor = "n.assessed",
-        title = "First Year Curriculum Treemap, Area = # of assessments per attribute",
+        title = "EDPS 101 Curriculum, Area = # of assessments per attribute",
         title.legend = "# of assessments per indicator",
         type = "manual",
         palette=brewer.pal(7,"YlGn"),

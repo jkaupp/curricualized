@@ -1,9 +1,11 @@
 # curricualized: _visualizing curriculum mapping_
 ---
 
-_This approach is best suited for those programs and people that are familiar with curriculum mapping, and have undertaken or completed the mapping process at least once._
+>Curriculum Mapping: “representing spatially the different components of the curriculum so that the whole picture and the relationships and connections between the parts of the map are easily seen”.  Harden (2001)
 
 ---
+
+The above quote may be the underlying goal of curriculum mapping, but I think it got lost along the way.
 
 Often curriculum mapping is done as a one-off, 'fire-and-forget' method at the start of a cylical/program/curriculum review. This is despite the fact, that once most  program undertake curriculum mapping, they tend to learn a great deal about the how their programs are structure, how they are taught, how they are assessed and how the students develop the intended outcomes.
 
