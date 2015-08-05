@@ -1,6 +1,6 @@
 ## Test code for Curriculum mapping Visualization
 
-library(xlsx)
+library(rio)
 library(plyr)
 library(dplyr)
 library(magrittr)
@@ -10,13 +10,13 @@ library(treemap)
 library(ggplot2)
 library(tidyr)
 
-setwd("~/ownCloud/Faculty Outcomes Work/Department Data/Faculty-wide/Maps")
+cmap.file <- "~/ownCloud/Faculty Outcomes Work/Department Data/Faculty-wide/Maps/Queen's Engineering Maps.xlsx"
 
 levels = c(0:5)
 labels = c("T, A","T, U","U, A","T","U","A")
 test <- function(x) factor(x,levels=levels,labels=labels)
 
-data <- read.xlsx("Queen's Engineering Maps.xlsx","FY-MAP",stringsAsFactors="False")
+data <- import(cmap.file,sheet="FY-MAP")
 
 c.map <- data[,c(5:17)] %>% 
   colwise(test)() %>% 
@@ -28,7 +28,8 @@ names(m.data) %<>%
   tolower()
 
 # Changed to course view.
-tree.map <- m.data[m.data$variable=="APSC.101",] %>% 
+tree.map <- m.data %>%
+  filter(variable=="APSC 101") %>% 
   group_by(program,ga,indicator,description) %>% 
   summarize(n.assessed=sum(value))
 
