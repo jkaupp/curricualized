@@ -11,28 +11,36 @@ library(tidyr)
 library(viridis)
 library(scales)
 library(grid)
+library(waffle)
 library(rcdimple)
 
 cmap.file <- "~/ownCloud/Faculty Outcomes Work/Department Data/Faculty-wide/Maps/Queen's Engineering Maps.xlsx"
 
 c.levels = c(0:3)
-c.labels = c(NA,"I","D","A")
+c.labels = c("I","D","A")
 test <- function(x) factor(x,levels=c.levels,labels=c.labels)
 
 # Read in the raw map
-data <- import(cmap.file,sheet="FY-MAP")
+data <- import(cmap.file,sheet="Test Map")
 
 # Create the melted map
-m.map <- gather(data,course,map,5:ncol(c.map)) %>% 
+m.map <- gather(data,course,map,4:ncol(data)) %>% 
   mutate(Indicator = factor(Indicator),
-         course = factor(course)) %>% 
+         course = as.character(course)) %>% 
   rename(attribute = GA,
          level = map) %>% 
-  set_names(tolower(names(.)))
+  set_names(tolower(names(.))) %>% 
+  filter(complete.cases(.))
+
+course.info <- data.frame(course=unique(m.map$course),
+                          semester=c(1,1,2,1,1,1,1,1,3,3,3,3,3,4,4,4,4,5,5,5,5,5,5,5,5,6,6,7,6,6,6,6,7,7,7,7,7,7,8,8,8,8,8,8,8))
+                      
+                    
+
 
 # Process the map 
 tree.map <- m.map %>%
-  group_by(program,course,attribute,indicator,description) %>% 
+  group_by(program,course,attribute,indicator) %>% 
   summarize(n.assessed=sum(level)) %>% 
   group_by(program,course,attribute) %>% 
   mutate(n.indicator = n(),
@@ -41,31 +49,12 @@ tree.map <- m.map %>%
 
 
 
-
-#OLD ---Using the treemap package ---- 
-
-treemap(tree.map,
-        index = c("ga","indicator"),
-        vSize = "ga.assessed",
-        vColor = "n.assessed",
-        title = "EDPS 101 Curriculum, Area = # of assessments per attribute",
-        title.legend = "# of assessments per indicator",
-        type = "manual",
-        palette=brewer.pal(7,"YlGn"),
-        fontsize.labels = c(16,0),
-        fontcolor.labels = "#000000",
-        lowerbound.cex.labels = 0.1,
-        range = c(0,3),
-        bg.labels = 0,
-        drop.unused.levels = TRUE)
-
-
 ## Attribute Coxcomb for Curriculum Mapping----
 ## Attribute level curriculum mapping. Provides vizualization of how mnay times an attribute is measured in a course
 ## Input is long-format/melted data frame key=indicator, value=value
 ga.cxc <- function (m.df)
 {
-  attribute.colors <- data_frame(
+  attribute.colors <- data.frame(
     attribute = c(
       "KB","PA","IN","DE","ET","TW","CO","PR","IM","EE","EC","LL"),
     color = viridis(12))
@@ -159,12 +148,12 @@ c.tree <- function (m.df)
 #  Can look at grouping the X axis by year and course to look at entire programs
 #  Auto-aggregate may be an issue, in which case need to create unqiue IDs for each.
 
-    data <- m.map %>%
-      mutate(level = factor(level,c.levels,c.labels))
+    data <- m.map %>% 
+      mutate(level = factor(level, labels = c.labels)) 
     
     dp <- dimple(
       x = "course",
-      y =  "attribute",
+      y =  c("program","attribute"),
       groups = "level",
       data = data,
       type = "bar"
@@ -187,16 +176,62 @@ c.tree <- function (m.df)
   )
     )
     
+    
+    
+# CEAB Reporting Samples: Stacked Bar for Attribute Maps ----
+    ceab.stackedbar <- . %>%
+    {
+      inner_join(.,course.info) %>%
+        mutate(level = factor(level, labels = c.labels)) %>%
+        group_by(course,attribute,level) %>%
+        distinct %>%
+        group_by(attribute,level) %>%
+        summarize(n = n()) %>%
+        ggplot(aes(x = attribute, y = n)) +
+        geom_bar(aes(fill = level), stat = "identity") +
+        ylab("Number of Courses") +
+        xlab("Attribute") +
+        theme_light()
+    }
+    
+# CEAB Reporting Samples: Stacked Bar by for Progession Maps ---- 
+      
+    ceab.semester.stackedbar <- . %>%
+    {
+      inner_join(.,course.info) %>%
+        mutate(level = factor(level, labels = c.labels)) %>%
+        group_by(course,attribute,level) %>%
+        distinct %>%
+        group_by(semester,level) %>%
+        summarize(n = n()) %>%
+        ggplot(aes(x = semester, y = n)) +
+        geom_bar(aes(fill = level), stat = "identity") +
+        ylab("Number of Courses") +
+        xlab("Semester") +
+        scale_x_continuous(breaks = 1:8) +
+        theme_light()
+    }
+    
+# CEAB Reporting Samples: Waffle Chart for Porportion ---- 
+    
+    ceab.ida.waffle <- . %>%
+    {
+      inner_join(.,course.info) %>%
+        mutate(level = factor(level, labels = c.labels)) %>%
+        group_by(course,attribute,level) %>%
+        distinct %>%
+        group_by(level) %>%
+        summarize(n = n()) %>%
+        select(n) %>%      
+        unlist %>% 
+        set_names(c("I","D","A")) %>% 
+        waffle(
+          size=0.5, 
+          colors=c("#c7d4b6", "#a3aabd", "#a0d0de", "#97b5cf"), 
+          title="Development focus of the program", 
+          xlab="1 square == 1 course"
+        )
+    }    
+    
 
-#Using d3 packages ----
-library(R2D3)
-library(networkD3)
-
-
-JSON<-jsonNestedData(structure=tree.map[,c(2:4)], values=tree.map[,7], top_label = "FEAS")
-
-Flare <- rjson::fromJSON(JSON[[2]])
-
-D3Tree(JSON, file_out="Tree.html")
-D3Dendro(JSON, file_out="Dendro.html", width=1920, collapsible = TRUE)
-treeNetwork(List = Flare, fontSize = 14, opacity = 0.9)
+    
