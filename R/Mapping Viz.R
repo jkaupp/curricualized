@@ -19,7 +19,7 @@ library(gridExtra)
 library(extrafont)
 
 cmap.file <-
-  "~/ownCloud/Faculty Outcomes Work/Department Data/Faculty-wide/Maps/Queen's Engineering Maps.xlsx"
+  "~/ownCloud/Projects/R/Projects/curricualized/data/Test Map.xlsx"
 
 c.levels = c(1:3)
 c.labels = c("I","D","A")
@@ -409,8 +409,8 @@ feas1 <- feas.IDA.bar(m.map)
 feas2 <- feas.IDA.progression(m.map)
 feas3 <-  feas.IDA.waffle(m.map)
 
-png("CAEB Reporting.png", width = 4800, height = 3000, res=300, type="cairo-png")
-grid.arrange(ceab1,ceab2,ceab3, ncol=1)
+png("CAEB Reporting.png", width = 4800, height = 3000, res=200, type="cairo-png")
+grid.arrange(ceab1,ceab2,ceab3, layout_matrix = rbind(c(1,2),c(3,3)))
 dev.off()
 
 png("FEAS Alternatives.png", width = 4800, height = 3000, res=200, type="cairo-png")
