@@ -407,7 +407,7 @@ ceab3 <- ceab.IDA.pie(m.map)
 
 feas1 <- feas.IDA.bar(m.map)
 feas2 <- feas.IDA.progression(m.map)
-feas3 <-  feas.IDA.waffle(m.map)
+feas3 <- feas.IDA.waffle(m.map)
 
 png("CAEB Reporting.png", width = 4800, height = 3000, res=200, type="cairo-png")
 grid.arrange(ceab1,ceab2,ceab3, layout_matrix = rbind(c(1,2),c(3,3)))
