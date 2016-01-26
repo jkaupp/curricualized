@@ -19,19 +19,20 @@ library(gridExtra)
 library(extrafont)
 
 cmap.file <-
-  "~/ownCloud/Projects/R/Projects/curricualized/data/Test Map.xlsx"
+  "~/ownCloud/Projects/R/Projects/curricualized/data/MME Map.xlsx"
 
 c.levels = c(1:3)
 c.labels = c("I","D","A")
 
 # Read in the raw map
-data <- import(cmap.file,sheet = "Test Map")
+data <- import(cmap.file,sheet = "MME Map")
+udle.map <- import(cmap.file, sheet = "GA2UDLE")
 
 # Create the melted map
-m.map <- gather(data,course,map,4:ncol(data)) %>%
+m.map <- gather(data,course,map,5:ncol(data)) %>%
   mutate(
     Indicator = factor(Indicator),
-    course = as.character(course),
+    course_code = as.character(course),
     GA = factor(
       GA, levels = c(
         "KB","PA","IN","DE","ET","TW","CO","PR","IM","EE","EC","LL"
@@ -43,17 +44,25 @@ m.map <- gather(data,course,map,4:ncol(data)) %>%
   rename(attribute = GA,
          level = map) %>%
   set_names(tolower(names(.))) %>%
-  filter(complete.cases(.))
-
-course.info <- data.frame(
-  course = unique(m.map$course),
-  semester = c(
-    1,1,2,1,1,1,1,1,3,3,3,3,3,4,4,4,4,5,5,5,5,5,5,5,5,6,6,7,6,6,6,6,7,7,7,7,7,7,8,8,8,8,8,8,8
-  )
-) %>%
+  filter(complete.cases(.)) %>% 
   mutate(course = as.character(course),
-         year = str_extract(course, "\\d"))
+         program_year = str_extract(course, "\\d")) %>% 
+  mutate(program_year = factor(program_year, labels = c("First Year","Second Year","Third Year","Fourth Year")))
 
+# course.info <- data.frame(
+#   course = unique(m.map$course),
+#   semester = c(
+#     1,1,2,1,1,1,1,1,3,3,3,3,3,4,4,4,4,5,5,5,5,5,5,5,5,6,6,7,6,6,6,6,7,7,7,7,7,7,8,8,8,8,8,8,8
+#  )
+# ) %>%
+#   mutate(course = as.character(course),
+#          year = str_extract(course, "\\d"))
+
+m.map <- left_join(m.map,udle.map) %>% 
+  transform(UDLE = strsplit(UDLE, "\\|")) %>%
+  unnest(UDLE) %>% 
+  separate(UDLE, c("U1","U2"), sep = "\\.") 
+  
 
 # Process the map
 tree.map <- m.map %>%
@@ -155,13 +164,14 @@ c.tree <- function (m.df)
     arrange(attribute)
   
   
-  m.df %>%
-    select(assessment, attribute, indicator, context) %>%
-    distinct(assessment, attribute, indicator, context) %>%
+  m.map %>%
+#     select(assessment, attribute, indicator, context) %>%
+#     distinct(assessment, attribute, indicator, context) %>%
+    distinct(attribute, indicator) %>%
     group_by(indicator) %>%
     mutate(n.indicator = n()) %>%
     distinct(indicator) %>%
-    select(-assessment,-context) %>%
+    # select(-assessment,-context) %>%
     arrange(attribute) %>%
     as.data.frame() %>%
     left_join(.,attribute.colors) %>%
@@ -195,10 +205,12 @@ data <- m.map %>%
 
 dp <- dimple(
   x = "course",
-  y =  c("program","attribute"),
+  y =  c("attribute"),
   groups = "level",
   data = data,
-  type = "bar"
+  type = "bar",
+  width = 1600,
+  height = 1000
 ) %>%
   yAxis(type = "addCategoryAxis") %>%
   xAxis(type = "addCategoryAxis") %>%
