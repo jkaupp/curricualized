@@ -41,7 +41,7 @@ m.map <- gather(data,course,map,5:ncol(data)) %>%
       )
     )
   ) %>%
-  rename(attribute = GA,
+  dplyr::rename(attribute = GA,
          level = map) %>%
   set_names(tolower(names(.))) %>%
   filter(complete.cases(.)) %>% 

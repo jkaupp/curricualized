@@ -5,6 +5,8 @@ library(tidyr)
 library(stringr)
 library(grid)
 library(gridExtra)
+library(treemap)
+library(extrafont)
 
 
 AU_Check <- function(df) {
@@ -160,20 +162,31 @@ program_ga_tree <- function (df,year,x,y)
       vSize = "n",
       vColor = "attribute.color",
       type = "color",
-      title = paste0("MECH Program CEAB GA Mapping:", year),
+      #title = paste0("MECH Program CEAB GA Mapping:", year),
+      title = paste0("Curriculum Mapping:Assessment Approach by Graduate Attribute:"),
       title.legend = "",
-      fontsize.labels = c(28,14),
+      fontsize.labels = c(28,12),
+      fontsize.title = 30,
       fontface.labels = c("bold","plain"),
+      fontfamily.labels = "Oswald",
+      fontfamily.title = "Oswald",
       fontcolor.labels = "#f0f0f0",
       lowerbound.cex.labels = 0.1,
       bg.labels = 0,
+      border.lwds = c(2,2),
       border.col = "#ffffff",
       position.legend = "none",
-      align.labels = list(c("left","top"), c("right","bottom")),
-      vp = vplayout(x,y)
+      align.labels = list(c("left","top"), c("right","bottom"))
+      #vp = vplayout(x,y)
     )
     }
 }
+png("GA Maps.png", width = 1280, height = 800, res = 100)
+m.map %>% 
+  mutate(course_code = str_replace(course_code, "APSC","ENGR")) %>% 
+  program_ga_tree(.,"First Year",1,1)
+dev.off()
+
 
 ## UDLE Treemap ----
 program_udle_tree <- function (df,year,x,y)
