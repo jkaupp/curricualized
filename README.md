@@ -86,6 +86,8 @@ Once you arrange your mapping information into a Base Map and Encoding Matrix, y
 1. temporal data
 2. hierarchical data
 
+
+
 For example, a treemap visualization of the curriculum by attribute and course:
 
 ![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/GA_Maps.png)
@@ -94,6 +96,7 @@ or produce a [collapsible dendrogram visualization][dendro] of the outcomes stru
 
 [dendro]: http://bl.ocks.org/jkaupp/c7affaad7ea147c79799
 
+---
 
 # What does it get used for?
 
