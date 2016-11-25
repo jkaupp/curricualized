@@ -82,7 +82,7 @@ Once you arrange your mapping information into a Base Map and Encoding Matrix, y
 
 For example, a treemap visualization of the curriculum by attribute:
 
-![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/curriculum_ga_treemap.png)
+![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/ga.png)
 
 or with a finer grain, by attribute and indicator:
 
