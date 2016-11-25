@@ -14,14 +14,14 @@ This typically isn't due to mass apathy, laziness or a lack of time.  Once a cur
 
 A more pressing issue is what one actually gets out of a curriculum map, or _what it tells you_.  In most cases, the curriculum map is simply presented as a matrix, a table, or a gantt-style chart at best.  Some standard methods of visualizing curriculum mapping information, such as bar charts and pie charts fail to illustrate the mapping informatio in a way that maximizes the utility of the data and presents it in an effective manner.  For instance:
 
-![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/traditional_mapping.png)
+![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/traditional.png)
 
 
 This view of the curriculum doesn't lend itself to be easily understood, and doesn't provide a great deal of meaning beyond those that created the map.
 
-I believe that it is the combination of incorrect granularity of mapping and and the lack of meaningful visualization options that is the key obstacle impeding meaningful and continuous curriculum mapping.  To illustrate this point, below is a reimagining of the previous bar and pie charts.
+I believe that it is the combination of incorrect granularity of mapping and and the lack of meaningful visualization options that is the key obstacle impeding meaningful and continuous curriculum mapping.  To illustrate this point, below is a reimagining of the previous bar and pie charts.  This version maintains the ideas behind the original but provides additional content by illustrating the granularity and clearer progression of the attributes through the curriculum.  
 
-![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/updated_mapping.png)
+![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/updated.png)
 
 
 ---
