@@ -12,10 +12,16 @@ This typically isn't due to mass apathy, laziness or a lack of time.  Once a cur
 
    * Maps with a very small resolution are more difficult to modified, as they contain very fine grains of information *(assessments, weeks)*  
 
-A more pressing issue is what one actually gets out of a curriculum map, or _what it tells you_.  In most cases, the curriculum map is simply presented as a matrix, a table, or a gantt-style chart at best.  This view of the curriculum doesn't lend itself to be easily understood, and doesn't provide a great deal of meaning beyond those that created the map.
+A more pressing issue is what one actually gets out of a curriculum map, or _what it tells you_.  In most cases, the curriculum map is simply presented as a matrix, a table, or a gantt-style chart at best.  Some standard methods of visualizing curriculum mapping information, such as bar charts and pie charts fail to illustrate the mapping informatio in a way that maximizes the utility of the data and presents it in an effective manner.  For instance:
 
-I believe that it is the combination of incorrect granularity of mapping and and the lack of meaningful visualization options that is the key obstacle impeding meaningful and continuous curriculum mapping.
+![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/CEAB_Reporting.png)
 
+
+This view of the curriculum doesn't lend itself to be easily understood, and doesn't provide a great deal of meaning beyond those that created the map.
+
+I believe that it is the combination of incorrect granularity of mapping and and the lack of meaningful visualization options that is the key obstacle impeding meaningful and continuous curriculum mapping.  To illustrate this point, below is a reimagining of the previous bar and pie charts.
+
+![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/FEAS_Alternatives.png)
 
 
 ---
@@ -78,15 +84,11 @@ The next step is creating the two main elements of a curriculum map to be visual
 Once you arrange your mapping information into a Base Map and Encoding Matrix, you have essentially created a hierarchical data structre that can be visualized using the many different types of data contained therein.  In the case of curriculum mapping, this data would be best represented as:
 
 1. temporal data
-2. tree data
+2. hierarchical data
 
-For example, a treemap visualization of the curriculum by attribute:
+For example, a treemap visualization of the curriculum by attribute and course:
 
 ![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/GA_Maps.png)
-
-or with a finer grain, by attribute and indicator:
-
-![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/curriculum_treemap.png)
 
 or produce a [collapsible dendrogram visualization][dendro] of the outcomes structure from the basemap
 
