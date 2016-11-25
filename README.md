@@ -90,7 +90,7 @@ Once you arrange your mapping information into a Base Map and Encoding Matrix, y
 
 For example, a treemap visualization of the curriculum by attribute and course:
 
-![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/GA_Maps.png)
+![](https://raw.githubusercontent.com/jkaupp/curricualized/master/image/GA_treemap.png)
 
 or produce a [collapsible dendrogram visualization][dendro] of the outcomes structure from the basemap
 
